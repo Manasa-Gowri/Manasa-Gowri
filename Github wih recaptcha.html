@@ -1,0 +1,49 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+</script>
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://platts--pltyoda.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+<input type=hidden name='captcha_settings' value='{"keyname":"Test_GIthub","fallback":"true","orgId":"00D3E000000BAag","ts":""}'>
+<input type=hidden name="orgid" value="00D3E000000BAag">
+<input type=hidden name="retURL" value="http://google.com">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="manasa.gowri@spglobal.com">                                      -->
+<!--  ----------------------------------------------------------------------  -->
+
+Type of Change Request:<select  id="00N7Y000008PhLU" name="00N7Y000008PhLU" title="Type of Change Request"><option value="">--None--</option><option value="Add User">Add User</option>
+<option value="Remove User">Remove User</option>
+<option value="User Swap">User Swap</option>
+</select><br>
+
+Name of User:<input  id="00N7Y000008PhNB" maxlength="40" name="00N7Y000008PhNB" size="20" type="text" /><br>
+
+Email Address:<input  id="00N7Y000008PhNG" maxlength="40" name="00N7Y000008PhNG" size="20" type="text" /><br>
+
+Product/Service:<textarea  id="00N7Y000008PhNL" name="00N7Y000008PhNL" type="text" wrap="soft"></textarea><br>
+
+User ID:<input  id="00N7Y000008PhNQ" maxlength="40" name="00N7Y000008PhNQ" size="20" type="text" /><br>
+
+<input type="hidden"  id="external" name="external" value="1" /><br>
+
+<div class="g-recaptcha" data-sitekey="6LdnmGAbAAAAAOQ1RVPxbG0L3RFykm2hFdCbPwTc"></div><br>
+<input type="submit" name="submit">
+
+</form>
